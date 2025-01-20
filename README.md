@@ -13,21 +13,21 @@ More programming challenge questions in SQL will be added as time permits. Let m
 You are given two tables, <b>flights</b> and <b>airports</b>, with the following structure: 
 
 ```bash  
-      |      flights      | 
-      |-----------|---|---|
-      |start_time |   |   |
-      |end_time   |   |   |
-      |start_port |   |   |
-      |end_port   |   |   |
+      |  flights  | 
+      |-----------|
+      |start_time |
+      |end_time   |
+      |start_port |
+      |end_port   |
 ```
 
 and
 
 ```bash  
-      |      airports     | 
-      |-----------|---|---|
-      |city_name  |   |   |
-      |port_code  |   |   |
+      | airports | 
+      |----------|
+      |city_name |
+      |port_code |
 ```
 
 Each row in the table <b>flights</b> contains information about a flight: the time of departure(<b>start_time</b>), time of landing(<b>end_time</b>), the code of its port of departure(<b>start_port</b>) and the code of its destination port(<b>end_port</b>).
@@ -36,7 +36,7 @@ Each row in the table <b>airports</b> contains information about an airport: the
 
 A passenger wants to travel from New York to Tokyo in the shortest possible time. The passenger can start at  any airport in New York and must finish their journey at any airport in Tokyo. They can change planes <b>at most once</b>. A plane change is possible, if the first flight ends no late than the start time of the second flight. Note that it is possible to change planes if the <b>end_time</b> of the first flight is equal to the <b>start_time</b> of the second flight. The second flight must start from the airport at which the first flight ended.
 
-Write an SQL query that finds the shortest time in which this journey can occur. Return the difference between the time of departure from New York and the time of arrival in Tokyo in minutes. If such a journey is inpossible, return NULL.
+Write an SQL query that finds the shortest time in which this journey can occur. Return the difference between the time of departure from New York and the time of arrival in Tokyo in minutes. If such a journey is impossible, return NULL.
 
 ## Examples
 1. For the given tables <b>flights:</b>
